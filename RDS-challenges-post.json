@@ -1,0 +1,12 @@
+{
+    "challenge_title" : "test",
+    "challengedescription" : "test",
+    "challenge_firstAward" : "test",
+    "challenge_secondAward" : "test",
+    "challenge_otherAward" : "test",
+    "challenge_startDate" : "17 Dec 2013",
+    "challenge_endDate" : "17 Dec 2013",
+    "challenge_single" : true,
+    "challenge_team" : false,
+    "partner_id" : 1
+  }
