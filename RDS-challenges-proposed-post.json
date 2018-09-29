@@ -1,0 +1,11 @@
+{
+    "proposedChallenge_title" : "",
+    "proposedChallenge_description" : "",
+    "proposedChallenge_firstAward" : "",
+    "proposedChallenge_secondAward" : "",
+    "proposedChallenge_otherAward" : "",
+    "partner_id" : 1,
+    "proposedChallenge_startDate" : Date(),
+    "proposedChallenge_endDate" : Date(),
+
+}
