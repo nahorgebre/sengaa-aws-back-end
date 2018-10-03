@@ -1,6 +1,7 @@
 // sengaaBackEnd/RDS-challenges-post.fn
 const AWS = require('aws-sdk');
 var mysql = require('mysql');
+var moment = require('moment');
 
 exports.fn = (event, context, callback) => {
   var connection = mysql.createConnection({
