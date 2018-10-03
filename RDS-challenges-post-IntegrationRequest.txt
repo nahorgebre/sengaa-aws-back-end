@@ -1,0 +1,13 @@
+#set($inputRoot = $input.path('$'))
+{
+  "challenge_title" : "$inputRoot.challenge_title",
+  "challenge_description" : "$inputRoot.challenge_description",
+  "challenge_startDate" : "$inputRoot.challenge_startDate",
+  "challenge_endDate" : "$inputRoot.challenge_endDate",
+  "challenge_firstAward" : "$inputRoot.challenge_firstAward",
+  "challenge_secondAward" : "$inputRoot.challenge_secondAward",
+  "challenge_otherAward" : "$inputRoot.challenge_otherAward",
+  "challenge_single" : "$inputRoot.challenge_single",
+  "challenge_team" : "$inputRoot.challenge_team",
+  "partner_id" : $inputRoot.partner_id
+}
