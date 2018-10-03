@@ -1,4 +1,4 @@
-// sengaaBackEnd/RDS-deals-proposed-activate-post.fn
+// sengaaBackEnd/RDS-deals-proposed-active-post.fn
 const AWS = require('aws-sdk');
 var mysql = require('mysql');
 

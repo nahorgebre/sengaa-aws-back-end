@@ -1,0 +1,12 @@
+DROP TABLE mysqlSengaaAws.sengaa_style;
+DROP TABLE mysqlSengaaAws.sengaa_inactiveEvent;
+DROP TABLE mysqlSengaaAws.sengaa_event;
+DROP TABLE mysqlSengaaAws.sengaa_inactiveDeal;
+DROP TABLE mysqlSengaaAws.sengaa_proposedDeal;
+DROP TABLE mysqlSengaaAws.sengaa_deal;
+DROP TABLE mysqlSengaaAws.sengaa_inactiveChallenge;
+DROP TABLE mysqlSengaaAws.sengaa_proposedChallenge;
+DROP TABLE mysqlSengaaAws.sengaa_challenge;
+DROP TABLE mysqlSengaaAws.sengaa_admin;
+DROP TABLE mysqlSengaaAws.sengaa_partner;
+DROP TABLE mysqlSengaaAws.sengaa_user;

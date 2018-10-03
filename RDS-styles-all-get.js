@@ -18,7 +18,7 @@ exports.fn = (event, context, callback) => {
       if (err) throw err;
       console.log("Query successfully executed!");
       console.log(result);
-      context.succeed("done");
+      context.succeed(result);
       callback(null, result);
     });
   });
