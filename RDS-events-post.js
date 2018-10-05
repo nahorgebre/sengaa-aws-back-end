@@ -14,7 +14,7 @@ exports.fn = (event, context, callback) => {
     if (err) throw err;
     console.log('Connected to database!');
     var sql = "insert into mysqlSengaaAws.sengaa_partner(event_title, event_description, event_picture, event_startDate, event_endDate)" +
-    "values (" + "'" + event.event_title + "', " + "'" + event.event_description + "', " + "'" + event.event_picture + "', " + event.event_startDate + ", " + event.event_endDate + ")";
+    "values (" + "'" + event.event_title + "', " + "'" + event.event_description + "', " + "'" + event.event_picture + "', '" + event.event_startDate + "', '" + event.event_endDate + "')";
     connection.query(sql, function (err, result) {
       if (err) throw err;
       console.log("1 record inserted!");

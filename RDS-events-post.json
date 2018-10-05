@@ -1,7 +1,0 @@
-{
-    "event_title" : "test",
-    "event_description" : "test",
-    "event_picture" : "test",
-    "event_startDate" : Date(),
-    "event_endDate" : Date()
-} 

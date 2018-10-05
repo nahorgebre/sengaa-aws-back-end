@@ -1,20 +1,38 @@
-// sengaaBackEnd/RDS-challenges-proposed-post.fn
+// sengaaBackEnd/RDS-challenges-post.fn
 const AWS = require('aws-sdk');
 var mysql = require('mysql');
 
 exports.fn = (event, context, callback) => {
   var connection = mysql.createConnection({
-    host     : 'mysql-sengaa-aws.cugdacsemmim.us-east-1.rds.amazonaws.com',
-    user     : 'sengaa18',
-    password : 'aagnes18',
-    database : 'mysqlSengaaAws'
+    host: 'mysql-sengaa-aws.cugdacsemmim.us-east-1.rds.amazonaws.com',
+    user: 'sengaa18',
+    password: 'aagnes18',
+    database: 'mysqlSengaaAws'
   });
 
-  connection.connect(function(err) {
+  connection.connect(function (err) {
     if (err) throw err;
     console.log('Connected to database!');
-    var sql = "insert into mysqlSengaaAws.sengaa_proposedChallenge(proposedChallenge_title, proposedChallenge_description, proposedChallenge_firstAward, proposedChallenge_secondAward, proposedChallenge_otherAward, partner_id, proposedChallenge_startDate, proposedChallenge_endDate, proposedChallenge_single, proposedChallenge_team)" +
-    "values (" + "'" + event.proposedChallenge_title + "', " + "'" + event.proposedChallenge_description + "', " + "'" + event.proposedChallenge_firstAward + "', " + "'" + event.proposedChallenge_secondAward + "', " + "'" + event.proposedChallenge_otherAward + "', " + event.partner_id + ", " + event.proposedChallenge_startDate + ", " + event.proposedChallenge_endDate + ", " + event.proposedChallenge_single + ", " + event.proposedChallenge_team + ")";
+
+    var proposedChallenge_title = "'" + event.proposedChallenge_title + "'";
+    var proposedChallenge_description = "'" + event.proposedChallenge_description + "'";
+    var proposedChallenge_firstAward = "'" + event.proposedChallenge_firstAward + "'";
+    var proposedChallenge_secondAward = "'" + event.proposedChallenge_secondAward + "'";
+    var proposedChallenge_otherAward = "'" + event.proposedChallenge_otherAward + "'";
+
+    var partner_id = event.partner_id;
+
+    var proposedChallenge_startDate = "'" + event.proposedChallenge_startDate + "'";
+    var proposedChallenge_endDate = "'" + event.proposedChallenge_endDate  + "'";
+
+    var proposedChallenge_single = event.proposedChallenge_single;
+    var proposedChallenge_team = event.proposedChallenge_team;
+
+    var attributes = "proposedChallenge_title, proposedChallenge_description, proposedChallenge_firstAward, proposedChallenge_secondAward, proposedChallenge_otherAward, partner_id, proposedChallenge_startDate, proposedChallenge_endDate, proposedChallenge_single, proposedChallenge_team";
+    var attributeValues = proposedChallenge_title + ", " + proposedChallenge_description + ", " + proposedChallenge_firstAward + ", " + proposedChallenge_secondAward + ", " + proposedChallenge_otherAward + ", " + partner_id + ", " + proposedChallenge_startDate + ", " + proposedChallenge_endDate + ", " + proposedChallenge_single + ", " + proposedChallenge_team;
+
+    var sql = "insert into mysqlSengaaAws.sengaa_challenge(" + attributes + ") values (" + attributeValues + ")";
+
     connection.query(sql, function (err, result) {
       if (err) throw err;
       console.log("1 record inserted!");
