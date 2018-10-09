@@ -1,4 +1,4 @@
-// sengaaBackEnd/RDS-partners-get.fn
+// sengaaBackEnd/RDS-partner-get.fn
 const AWS = require('aws-sdk');
 var mysql = require('mysql');
 

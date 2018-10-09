@@ -1,4 +1,4 @@
-// sengaaBackEnd/RDS-deals-get.fn
+// sengaaBackEnd/RDS-deal-get.fn
 const AWS = require('aws-sdk');
 var mysql = require('mysql');
 
