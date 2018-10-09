@@ -31,8 +31,8 @@ exports.fn = (event, context, callback) => {
     var attributes = "proposedChallenge_title, proposedChallenge_description, proposedChallenge_firstAward, proposedChallenge_secondAward, proposedChallenge_otherAward, partner_id, proposedChallenge_startDate, proposedChallenge_endDate, proposedChallenge_single, proposedChallenge_team";
     var attributeValues = proposedChallenge_title + ", " + proposedChallenge_description + ", " + proposedChallenge_firstAward + ", " + proposedChallenge_secondAward + ", " + proposedChallenge_otherAward + ", " + partner_id + ", " + proposedChallenge_startDate + ", " + proposedChallenge_endDate + ", " + proposedChallenge_single + ", " + proposedChallenge_team;
 
-    var sql = "insert into mysqlSengaaAws.sengaa_challenge(" + attributes + ") values (" + attributeValues + ")";
-
+    var sql = "insert into mysqlSengaaAws.sengaa_proposedChallenge(" + attributes + ") values (" + attributeValues + ")";
+    console.log(sql);
     connection.query(sql, function (err, result) {
       if (err) throw err;
       console.log("1 record inserted!");

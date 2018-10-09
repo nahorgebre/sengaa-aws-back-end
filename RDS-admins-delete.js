@@ -13,7 +13,7 @@ exports.fn = (event, context, callback) => {
   connection.connect(function(err) {
     if (err) throw err;
     console.log('Connected to database!');
-    var sql = "delete from mysqlSengaaAws.sengaa_user where admin_id = " + event.admin_id;
+    var sql = "delete from mysqlSengaaAws.sengaa_admin where admin_id = " + event.admin_id;
     connection.query(sql, function (err, result) {
       if (err) throw err;
       console.log("1 record deleted!");
@@ -23,3 +23,4 @@ exports.fn = (event, context, callback) => {
     });
   });
 }
+

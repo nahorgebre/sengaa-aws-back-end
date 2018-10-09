@@ -13,7 +13,7 @@ exports.fn = (event, context, callback) => {
   connection.connect(function(err) {
     if (err) throw err;
     console.log('Connected to database!');
-
+                                         proposedDeal_title
     var proposedDeal_title = "'" + event.proposedDeal_title + "'";
     var proposedDeal_description = "'" + event.proposedDeal_description + "'";
     var proposedDeal_url = "'" + event.proposedDeal_url  + "'";
@@ -24,9 +24,8 @@ exports.fn = (event, context, callback) => {
 
     var attributes = "proposedDeal_title, proposedDeal_description, proposedDeal_url, proposedDeal_picture, partner_id, proposedDeal_startDate, proposedDeal_endDate";
     var attributeValues = proposedDeal_title + ", " + proposedDeal_description + ", " + proposedDeal_url + ", " + proposedDeal_picture + ", " + partner_id + ", " + proposedDeal_startDate + ", " + proposedDeal_endDate;
-
-    var sql = "insert into mysqlSengaaAws.sengaa_deal(" + attributes + ") values (" + attributeValues + ")";
-
+    var sql = "insert into mysqlSengaaAws.sengaa_proposedDeal(" + attributes + ") values (" + attributeValues + ")";
+    console.log(sql);
     connection.query(sql, function (err, result) {
       if (err) throw err;
       console.log("1 record inserted!");
