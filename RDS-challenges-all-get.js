@@ -13,7 +13,7 @@ exports.fn = (event, context, callback) => {
   connection.connect(function(err) {
     if (err) throw err;
     console.log('Connected to database!');
-    var sql = "select * from mysqlSengaaAws.sengaa_challenge";
+    var sql = "select sengaa_challenge.challenge_id, sengaa_challenge.challenge_title, sengaa_challenge.challenge_description, sengaa_challenge.challenge_startDate, sengaa_challenge.challenge_endDate, sengaa_challenge.challenge_firstAward, sengaa_challenge.challenge_secondAward, sengaa_challenge.challenge_otherAward, sengaa_challenge.challenge_single, sengaa_challenge.challenge_team, sengaa_partner.partner_id, sengaa_partner.partner_logo from mysqlSengaaAws.sengaa_challenge, mysqlSengaaAws.sengaa_partner where sengaa_challenge.partner_id = sengaa_partner.partner_id";
     connection.query(sql, function (err, result) {
       if (err) throw err;
       console.log("Query successfully executed!");
