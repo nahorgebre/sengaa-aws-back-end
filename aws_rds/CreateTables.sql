@@ -196,8 +196,7 @@ user_id INT NOT NULL,
 challenge_id INT NOT NULL,
 PRIMARY KEY ( style_id ),
 FOREIGN KEY ( user_id )
-REFERENCES sengaa_user( user_id )
-ON DELETE CASCADE ,
+REFERENCES sengaa_user( user_id ),
 FOREIGN KEY ( challenge_id )
 REFERENCES sengaa_challenge( challenge_id )
 ON DELETE CASCADE
